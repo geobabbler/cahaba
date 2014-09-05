@@ -1,5 +1,5 @@
 /**
- * CatalogController
+ * DatasetController
  *
  * @module      :: Controller
  * @description	:: A set of functions called `actions`.
@@ -14,34 +14,25 @@
  *
  * @docs        :: http://sailsjs.org/#!documentation/controllers
  */
-var CatalogController = {
-		//var c = new Catalog();
-        index: function(req, res) {
-			var f = Catalog.getFolders('./data');
+
+module.exports = {
+    
+  
+	index: function(req,res){
+			sails.log(req.param('name'));
+			sails.log(Catalog.attributes.allowedTypes);
+			var f = Catalog.getDatasets(req.param('name'));
             return res.view({
                 catalogs: f
 				//layout: 'layout'
             });
-        }
-
-
-		
-}
-    
-
-
-	
-module.exports = CatalogController;
-//module.exports = {
-    
-  
-
+            	},
 
   /**
    * Overrides for the settings in `config/controllers.js`
-   * (specific to CatalogController)
+   * (specific to DatasetController)
    */
- // _config: {}
+  _config: {}
 
   
-//};
+};

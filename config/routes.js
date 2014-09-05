@@ -34,7 +34,8 @@ module.exports.routes = {
   // (This would also work if you had a file at: `/views/home.ejs`)
   '/': {
     view: 'home/index'
-  }
+  },
+  'GET /dataset/:name': 'DatasetController.index'
 
   /*
   // But what if you want your home page to display

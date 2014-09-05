@@ -24,7 +24,7 @@
 	<h3>Choose a category:</h3>
   <div class="row">
     <% _.each(catalogs, function (catalog) { %>
-    <div class="col-xs-6 col-sm-3 col-md-4"><a href="/dataset/<%=catalog %>"><%=catalog %></a></div>
+    <div class="col-xs-6 col-sm-3 col-md-4"><%= catalog %></div>
     <% }) %>
   </div>   
   </div>
